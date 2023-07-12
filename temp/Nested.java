@@ -31,7 +31,7 @@ public class Nested{
 	}
 	public static void demo_two(int value){
 
-		int[][] arr = {{1 , 3, 5 ,7},{3,2,1,8},{9,5,4,6}};
+		int[][] arr = {{1 , 3, 5 ,7},{3,2,1,8},{9,5,1,6}};
 
 		int x = -1;
 		int y = -1;
@@ -41,14 +41,15 @@ public class Nested{
 				if(arr[i][j] == value){
 					x = i;
 					y = j;
-					break OUTER_LOOP;
+					System.out.println("Finded: " + value + ": [" + x + "] , [ " + y + "]");
+					break;// OUTER_LOOP;
 				}
 			}
 		}
 		if (x == -1 && y == -1) {
 			System.out.println("Nothing find");
 		}else{
-			System.out.println("Finded: " + value + ": [" + x + "] , [ " + y + "]");
+			System.out.println("Last Finded: " + value + ": [" + x + "] , [ " + y + "]");
 		}
 
 
@@ -57,7 +58,7 @@ public class Nested{
 
 		//demo_zero();
 		//demo_one();
-		demo_two(7);
-		demo_two(9);
+		demo_two(1);
+		
 	}
 }
