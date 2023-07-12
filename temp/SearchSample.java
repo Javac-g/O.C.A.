@@ -41,8 +41,8 @@ public class SearchSample{
 	}
 	public static void demo_two(){
 		int[][] myComplex ={{5,2,1,3},{3,9,8,9},{5,7,12,7}};
-		for (int[] mySimple: myComplex ) {
-				for (int i = 0; i < myComplex.length ; i++) {
+		OUTER_LOOP: for (int[] mySimple: myComplex ) {
+				INNER_LOOP: for (int i = 0; i < myComplex.length ; i++) {
 				System.out.print(mySimple[i] + "\t");
 			}
 			System.out.println();
