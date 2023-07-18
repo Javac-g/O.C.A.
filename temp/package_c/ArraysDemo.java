@@ -1,5 +1,5 @@
 package package_c;
-
+import java.util.Arrays;
 public class ArraysDemo{
 
 
@@ -23,8 +23,28 @@ public class ArraysDemo{
 		}
 		System.out.println("");
 	}
+	public static  <T> void print_sorted(T[] arr){
+
+
+		for (int i = 0;i < arr.length ;i++ ) {
+			System.out.print(arr[i]+ " ");
+		}
+		System.out.println("");
+	}
 	public static void main(String...args){
-		print(one);
+		//print(one);
+
+		Integer[] list = {5,3,1,3,4,7,3,8,9};
+		String[] str = {"harry","whells","dwayn","brody","tommy"};
+		
+		Arrays.sort(list);
+		Arrays.sort(str);
+		print_sorted(list);
+		print_sorted(str);
+
+		System.out.println(Arrays.binarySearch(list,7));//array must be sorted
+		
+		
 
 	}
 }
