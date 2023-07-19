@@ -23,6 +23,16 @@ public class ArraysDemo{
 		}
 		System.out.println("");
 	}
+	public static void print_xmas_tree(int N){
+		
+		for (int i = 0;i < N;i++ ) {
+
+			for (int j = N; j > 0 ; j-- ) {
+				System.out.print("_");
+			}
+			System.out.print("*" + "\n");
+		}
+	}
 	public static  <T> void print_sorted(T[] arr){
 
 
@@ -34,16 +44,16 @@ public class ArraysDemo{
 	public static void main(String...args){
 		//print(one);
 
-		Integer[] list = {5,3,1,3,4,7,3,8,9};
-		String[] str = {"harry","whells","dwayn","brody","tommy"};
+		// Integer[] list = {5,3,1,3,4,7,3,8,9};
+		// String[] str = {"harry","whells","dwayn","brody","tommy"};
 		
-		Arrays.sort(list);
-		Arrays.sort(str);
-		print_sorted(list);
-		print_sorted(str);
+		// Arrays.sort(list);
+		// Arrays.sort(str);
+		// print_sorted(list);
+		// print_sorted(str);
 
-		System.out.println(Arrays.binarySearch(list,7));//array must be sorted
-		
+		// System.out.println(Arrays.binarySearch(list,7));//array must be sorted
+		print_xmas_tree(30);
 		
 
 	}
