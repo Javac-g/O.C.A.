@@ -1,9 +1,11 @@
 package package_c;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
+import java.util.Collections;
 public class Conv{
 
-	public static void demo(List<String> list){
+	public static <T> void demo(List<T> list){
 		System.out.println(list);
 	}
 	public static void demo(String[] arr){
@@ -16,7 +18,7 @@ public class Conv{
 				System.out.print(", ");
 			}
 		}
-		System.out.print("]");
+		System.out.println("]");
 	}
 	public static void main(String... arg){
 
@@ -31,6 +33,23 @@ public class Conv{
 
 		demo(list);
 		demo(arrayStr);
+
+		String[] birds ={ "hawk","Woodpecker","Eager","Kiwi"};
+		List<String> list2 = Arrays.asList(birds);// constant size array
+		birds[0] = "new";
+		demo(list2);
+		String changed = list2.set(0,"Test");
+		demo(birds);
+		System.out.println("Changed: " +  changed + " to " + birds[0]);
+
+		ArrayList<String> resizable = new ArrayList<>();//way to make resizable
+		Collections.addAll(resizable,birds);
+		resizable.add("Raven");
+		demo(resizable);
+
+		List<Integer> nums = Arrays.asList(1,6,2,8,4);
+		Collections.sort(nums);
+		demo(nums);
 
 	}
 }
