@@ -18,7 +18,16 @@ public class Main_One{
 
 		System.out.println("First value: " + first);
 		System.out.println("Second value: " + second);
+		//Gen vs Object
 
+		NonGen iob = new NonGen(121212);
+		iob.show();
+		int v = (Integer)iob.getO();
+		System.out.println("Value: " + v);
 
+		NonGen strob = new NonGen("Max");
+		strob.show();
+		String str = (String)strob.getO();
+		System.out.println("Value: " + str);
 	}
 }
